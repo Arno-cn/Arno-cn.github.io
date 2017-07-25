@@ -102,7 +102,7 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp; 写作缘由： 分享搭建博客网站的经验 说明 本文使用Github和Hexo来搭建博客网站 使用工具：Git ,  Node.js  ,  Hexo">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://i.imgur.com/qYoY6Bt.pngWyg6R5z.jpg">
-<meta property="og:updated_time" content="2017-07-25T13:49:05.539Z">
+<meta property="og:updated_time" content="2017-07-25T14:51:50.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github+Hexo搭建个人博客">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp; 写作缘由： 分享搭建博客网站的经验 说明 本文使用Github和Hexo来搭建博客网站 使用工具：Git ,  Node.js  ,  Hexo">
@@ -368,7 +368,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://i.imgur.com/qYoY6Bt.pngWyg6R5z.jpg" rel="gallery_cj5jn2mru00001owoovzn402n"
+                 href="http://i.imgur.com/qYoY6Bt.pngWyg6R5z.jpg" rel="gallery_cj5jn5ojr0000e8wo7x42p97i"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://i.imgur.com/qYoY6Bt.pngWyg6R5z.jpg" itemprop="contentUrl"/>
               </a>
@@ -437,7 +437,7 @@ hexo g
 hexo d
 </code></pre><p>&emsp;然后打开浏览器输入：你的用户名.github.io就会发现你的网站已经能在网络上被访问了。</p>
 <h2 id="网址解析"><a href="#网址解析" class="headerlink" title="网址解析"></a>网址解析</h2><p>&emsp;如果每次访问博客都需要输入github.io太麻烦了，于是我们使用域名解析的方式将购买的域名指向我们的Github仓库，这样就能通过输入购买的域名来访问我们的博客了。</p>
-<p>&emsp;登录到阿里云，进入域名控制台，找到你的个性化域名，进入解析：<br><img src="http://i.imgur.com/Nh0H69Y.png" alt=""><br>然后添加解析：<br><img src="https://pic4.zhimg.com/v2-f0374354bbbf575aa8213336d09993a7_b.jpg" alt=""><br>&emsp;包括添加三条解析记录，192.30.255.112是GitHub的地址，你也可以ping你的 <a href="http://xxxx.github.io" target="_blank" rel="external">http://xxxx.github.io</a> 的ip地址，填入进去。第三个记录类型是CNAME，CNAME的记录值是：你的用户名.github.io 这里千万别弄错了。第二步，登录GitHub，进入之前创建的仓库，点击settings<br><img src="http://i.imgur.com/J8GHo3N.png" alt=""><br>&emsp;往下拉，设置Custom domain，输入你的域名<br><img src="http://i.imgur.com/GFjYtb3.png" alt=""><br>&emsp;点击save保存。第三步，进入本地博客文件夹 ，进入blog/source目录下，创建一个记事本文件，输入你的域名，对，只要写进你自己的域名即可。如果带有www，那么以后访问的时候必须带有www完整的域名才可以访问，但如果不带有www，以后访问的时候带不带www都可以访问。所以建议，不要带有www。<br><img src="http://i.imgur.com/E0ZDPfU.png" alt=""><br>&emsp;保存，命名为CNAME，注意要保存成所有文件，而不是txt文件。<br>完成这三步以后进入blog目录中，输入：</p>
+<p>&emsp;登录到阿里云，进入域名控制台，找到你的个性化域名，进入解析：<br><img src="http://i.imgur.com/Nh0H69Y.png" alt=""><br>然后添加解析：<br><img src="http://i.imgur.com/Gl6hXS1.png" alt=""><br>&emsp;包括添加三条解析记录，192.30.255.112是GitHub的地址，你也可以ping你的 <a href="http://xxxx.github.io" target="_blank" rel="external">http://xxxx.github.io</a> 的ip地址，填入进去。第三个记录类型是CNAME，CNAME的记录值是：你的用户名.github.io 这里千万别弄错了。第二步，登录GitHub，进入之前创建的仓库，点击settings<br><img src="http://i.imgur.com/J8GHo3N.png" alt=""><br>&emsp;往下拉，设置Custom domain，输入你的域名<br><img src="http://i.imgur.com/GFjYtb3.png" alt=""><br>&emsp;点击save保存。第三步，进入本地博客文件夹 ，进入blog/source目录下，创建一个记事本文件，输入你的域名，对，只要写进你自己的域名即可。如果带有www，那么以后访问的时候必须带有www完整的域名才可以访问，但如果不带有www，以后访问的时候带不带www都可以访问。所以建议，不要带有www。<br><img src="http://i.imgur.com/E0ZDPfU.png" alt=""><br>&emsp;保存，命名为CNAME，注意要保存成所有文件，而不是txt文件。<br>完成这三步以后进入blog目录中，输入：</p>
 <pre><code>hexo clean
 hexo g
 hexo d
@@ -462,6 +462,27 @@ hexo d
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div></div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/wechatpay.jpg" alt="Shinstein WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/alipay.jpg" alt="Shinstein Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
