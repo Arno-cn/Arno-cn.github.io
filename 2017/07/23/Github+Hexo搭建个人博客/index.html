@@ -102,7 +102,7 @@
 <meta property="og:description" content="&amp;emsp;&amp;emsp; 写作缘由： 分享搭建博客网站的经验 说明 本文使用Github和Hexo来搭建博客网站 使用工具：Git ,  Node.js  ,  Hexo">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://i.imgur.com/qYoY6Bt.pngWyg6R5z.jpg">
-<meta property="og:updated_time" content="2017-07-25T14:51:50.728Z">
+<meta property="og:updated_time" content="2017-07-25T15:08:28.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github+Hexo搭建个人博客">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp; 写作缘由： 分享搭建博客网站的经验 说明 本文使用Github和Hexo来搭建博客网站 使用工具：Git ,  Node.js  ,  Hexo">
@@ -368,7 +368,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://i.imgur.com/qYoY6Bt.pngWyg6R5z.jpg" rel="gallery_cj5jn5ojr0000e8wo7x42p97i"
+                 href="http://i.imgur.com/qYoY6Bt.pngWyg6R5z.jpg" rel="gallery_cj5jpjc520001iswo78mfd8n2"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://i.imgur.com/qYoY6Bt.pngWyg6R5z.jpg" itemprop="contentUrl"/>
               </a>
@@ -383,8 +383,8 @@
       
         <p><br><br>&emsp;&emsp; 写作缘由： 分享搭建博客网站的经验</p>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><ul>
-<li>本文使用Github和Hexo来搭建博客网站</li>
-<li>使用工具：Git ,  Node.js  ,  Hexo<a id="more"></a>
+<li>本文使用<strong>Github</strong>和<strong>Hexo</strong>来搭建博客网站</li>
+<li>使用工具：<strong>Git</strong> ,  <strong>Node.js</strong>  ,  <strong>Hexo</strong><a id="more"></a>
 </li>
 </ul>
 <h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ol>
@@ -397,56 +397,21 @@
 </ol>
 <h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>   &emsp;域名是便于记忆和沟通的一组服务器的地址，比如百度的域名是baidu.com。域名有许多后缀，常见的有com,cn,net,org等，可以根据你自己的喜好来选择域名后缀。申请域名的地方很多，我选择的是<a href="http://aliyun.com" target="_blank" rel="external"><strong>阿里云</strong></a>注册账号之后购买一个域名，这也是所有步骤中唯一花钱的地方。</p>
 <h2 id="创建Git账户"><a href="#创建Git账户" class="headerlink" title="创建Git账户"></a>创建Git账户</h2><p>&emsp;首先了解什么是Git,Git是一个开源的分布式版本控制系统，可以有效、高速地处理从小到非常大的项目版本管理。当我们在本地搭建好网站以后，需要上传到GitHub上。如果想要详细了解Git,可以参看廖雪峰老师的<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" title="Git教程" target="_blank" rel="external"><strong>Git教程</strong></a>。登录到<a href="http://github.com" target="_blank" rel="external"><strong>GitHub</strong></a>官网:<br><img src="http://i.imgur.com/Dr4qLbW.png" alt=""></p>
-<p>&emsp;创建了Git账户之后，点击start a project来创建一个Git仓库，仓库名必须按照用户名.github.io的格式来创建，记得在Initialize 那栏打上勾。<br><img src="http://i.imgur.com/WpclWiT.png" alt=""><br>&emsp;接下来要做的是安装Git,从<a href="https://git-scm.com/download/win" title="Git下载页面下载" target="_blank" rel="external"><strong>Git下载页面下载</strong></a>。安装完成后要将GIt和你的Git账户绑定，在桌面右击，选择Git bash here，输入</p>
-<pre><code>git config --global user.name &quot;你的用户名&quot;
-git config --global user.email &quot;你的注册邮箱&quot;
-</code></pre><p>&emsp;生成ssh密钥：</p>
-<pre><code>ssh-keygen -t rsa -C &quot;你的注册邮箱&quot;
-</code></pre><p>&emsp;然后三个回车即可。找到生成的rsa秘钥文件，在C盘的用户文件夹的.ssh文件中。<img src="http://i.imgur.com/ET1vcsH.png" alt=""><br>&emsp;打开rsa.pub文件，将里面的内容全部复制，然后登陆github账号，点击右上角的用户头像进入Settings界面,点击SSH and GPG keys创建SSH密钥，Titil字段可以随便填，将刚刚复制的内容复制到key中，然后添加SSH密钥。<img src="http://i.imgur.com/B4fUzvw.png" alt=""></p>
-<p>&emsp;接下来检验SSH连接能否成功建立：在gitbash 里输入以下命令</p>
-<pre><code>ssh git@github.com
-</code></pre><p>&emsp;出现如下信息表示连接建立成功：<img src="http://i.imgur.com/9f3hWtj.png" alt=""><br>&emsp;这里设置git密钥的原因是通过非对称加密的方式来完成加密，私钥放在自己的电脑里，公钥放在GitHub上，这样当你推送内容的时候，GitHub只要检测你的私钥跟公钥是否匹配，就省去了输入账号密码的步骤。</p>
+<p>&emsp;创建了Git账户之后，点击start a project来创建一个Git仓库，仓库名必须按照用户名.github.io的格式来创建，记得在Initialize 那栏打上勾。<br><img src="http://i.imgur.com/WpclWiT.png" alt=""><br>&emsp;接下来要做的是安装Git,从<a href="https://git-scm.com/download/win" title="Git下载页面下载" target="_blank" rel="external"><strong>Git下载页面下载</strong></a>。安装完成后要将GIt和你的Git账户绑定，在桌面右击，选择Git bash here，输入<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git<span class="built_in"> config </span>--global user.name <span class="string">"你的用户名"</span></div><div class="line">git<span class="built_in"> config </span>--global user.email <span class="string">"你的注册邮箱"</span></div></pre></td></tr></table></figure><br>&emsp;生成ssh密钥：<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">"你的注册邮箱"</span></div></pre></td></tr></table></figure><br>&emsp;然后三个回车即可。找到生成的rsa秘钥文件，在C盘的用户文件夹的.ssh文件中。<img src="http://i.imgur.com/ET1vcsH.png" alt=""><br>&emsp;打开rsa.pub文件，将里面的内容全部复制，然后登陆github账号，点击右上角的用户头像进入Settings界面,点击SSH and GPG keys创建SSH密钥，Titil字段可以随便填，将刚刚复制的内容复制到key中，然后添加SSH密钥。<img src="http://i.imgur.com/B4fUzvw.png" alt=""></p>
+<p>&emsp;接下来检验SSH连接能否成功建立：在gitbash 里输入以下命令<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ssh</span> <span class="selector-tag">git</span>@<span class="keyword">github</span>.<span class="keyword">com</span></div></pre></td></tr></table></figure><br>&emsp;出现如下信息表示连接建立成功：<img src="http://i.imgur.com/9f3hWtj.png" alt=""><br>&emsp;这里设置git密钥的原因是通过非对称加密的方式来完成加密，私钥放在自己的电脑里，公钥放在GitHub上，这样当你推送内容的时候，GitHub只要检测你的私钥跟公钥是否匹配，就省去了输入账号密码的步骤。</p>
 <h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>&emsp;Hexo基于Node.js，到<a href="https://nodejs.org/en/download/" title="Node.js下载页面" target="_blank" rel="external"><strong>Node.js下载页面</strong></a>下载。安装后，通过在cmd页面输入Node -v和npm -v来检测安装是否成功。<br><img src="http://i.imgur.com/OyahdO3.png" alt=""></p>
 <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>&emsp;Hexo是一个博客网站的框架。在电脑里创建一个文件夹，在文件夹中shift+右键，点击在此处打开命令窗口</p>
 <p><img src="https://pic1.zhimg.com/v2-a5450a466c0927c25dff8ad6f1d2046c_b.jpg" alt=""></p>
-<p>&emsp;输入</p>
-<pre><code>npm install -g hexo-cli
-</code></pre><p>&emsp;然后输入</p>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre><p>&emsp;至此我们的基本环境已经搭建完毕。</p>
-<h2 id="创建本地文件"><a href="#创建本地文件" class="headerlink" title="创建本地文件"></a>创建本地文件</h2><p>&emsp;在窗口中继续输入：</p>
-<pre><code>hexo init blog
-</code></pre><p>&emsp;这个命令会在当前文件夹生成一个初始网站文件，输入下列三个命令可以看到我们的网站基本雏形（需要进入blog文件中打开命令行窗口）：</p>
-<pre><code>hexo new &quot;test&quot;
-hexo g
-hexo s
-</code></pre><p>&emsp;然后在浏览器中输入localhost:4000就能看到我们的网站了。<br><img src="http://i.imgur.com/FBWKFoB.png" alt=""></p>
-<p>&emsp;接下来介绍常用的hexo命令：</p>
-<pre><code>hexo init 文件夹名 在当前文件夹中生成一个初始网站文件
-hexo clean 清除网站缓存
-hexo new &quot;文章名&quot; = hexo n  生成博客
-hexo generate = hexo g  生成hexo
-hexo server = hexo s  开启预览服务
-hexo d = hexo deploy 部署网站
-</code></pre><h2 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h2><p>&emsp;上面提到的步骤仅仅是在本地自嗨，接下来我们要将网站推送到GitHub上。</p>
-<p>&emsp;先介绍两个概念，blog文件夹中的config.yml文件被称为站点配置文件<br><img src="https://pic2.zhimg.com/v2-cb1fd5e5a2e73f513234e434724c7c55_b.jpg" alt=""><br>&emsp;blog文件夹中的themes文件夹中的_config.yml文件被称为主题配置文件。<br><img src="https://pic4.zhimg.com/v2-4252029e5634bf91c7d58916ae2b8ac3_b.jpg" alt=""><br>&emsp;下一步我们将Hexo和GitHub关联起来，翻到最后，修改deploy内容（注意冒号后面要加一个空格），repo部分填入</p>
-<pre><code>git@github:你的用户名/你的用户名.github.io.git
-</code></pre><p>&emsp;参考如下<br><img src="http://i.imgur.com/zwSAAOP.png" alt=""><br>&emsp;此时再打开命令行输入：</p>
-<pre><code>hexo clean
-hexo g
-hexo d
-</code></pre><p>&emsp;然后打开浏览器输入：你的用户名.github.io就会发现你的网站已经能在网络上被访问了。</p>
+<p>&emsp;输入<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-<span class="keyword">cli</span></div></pre></td></tr></table></figure><br>&emsp;然后输入<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></div></pre></td></tr></table></figure><br>&emsp;至此我们的基本环境已经搭建完毕。</p>
+<h2 id="创建本地文件"><a href="#创建本地文件" class="headerlink" title="创建本地文件"></a>创建本地文件</h2><p>&emsp;在窗口中继续输入：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo init blog</span></div></pre></td></tr></table></figure><br>&emsp;这个命令会在当前文件夹生成一个初始网站文件，输入下列三个命令可以看到我们的网站基本雏形（需要进入blog文件中打开命令行窗口）：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">new</span> <span class="string">"test"</span></div><div class="line">hexo g</div><div class="line">hexo s</div></pre></td></tr></table></figure><br>&emsp;然后在浏览器中输入localhost:4000就能看到我们的网站了。<br><img src="http://i.imgur.com/FBWKFoB.png" alt=""></p>
+<p>&emsp;接下来介绍常用的hexo命令：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">hexo init 文件夹名 在当前文件夹中生成一个初始网站文件</div><div class="line">hexo clean 清除网站缓存</div><div class="line">hexo new <span class="string">"文章名"</span> = hexo n  生成博客</div><div class="line">hexo generate = hexo g  生成hexo</div><div class="line">hexo<span class="built_in"> server </span>= hexo s  开启预览服务</div><div class="line">hexo d = hexo deploy 部署网站</div></pre></td></tr></table></figure></p>
+<h2 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h2><p>&emsp;上面提到的步骤仅仅是在本地自嗨，接下来我们要将网站推送到GitHub上。</p>
+<p>&emsp;先介绍两个概念，blog文件夹中的config.yml文件被称为站点配置文件<br><img src="https://pic2.zhimg.com/v2-cb1fd5e5a2e73f513234e434724c7c55_b.jpg" alt=""><br>&emsp;blog文件夹中的themes文件夹中的_config.yml文件被称为主题配置文件。<br><img src="https://pic4.zhimg.com/v2-4252029e5634bf91c7d58916ae2b8ac3_b.jpg" alt=""><br>&emsp;下一步我们将Hexo和GitHub关联起来，翻到最后，修改deploy内容（注意冒号后面要加一个空格），repo部分填入<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git@github:你的用户名/你的用户名<span class="selector-class">.github</span><span class="selector-class">.io</span><span class="selector-class">.git</span></div></pre></td></tr></table></figure><br>&emsp;参考如下<br><img src="http://i.imgur.com/zwSAAOP.png" alt=""><br>&emsp;此时再打开命令行输入：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo clean</span></div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure><br>&emsp;然后打开浏览器输入：你的用户名.github.io就会发现你的网站已经能在网络上被访问了。</p>
 <h2 id="网址解析"><a href="#网址解析" class="headerlink" title="网址解析"></a>网址解析</h2><p>&emsp;如果每次访问博客都需要输入github.io太麻烦了，于是我们使用域名解析的方式将购买的域名指向我们的Github仓库，这样就能通过输入购买的域名来访问我们的博客了。</p>
-<p>&emsp;登录到阿里云，进入域名控制台，找到你的个性化域名，进入解析：<br><img src="http://i.imgur.com/Nh0H69Y.png" alt=""><br>然后添加解析：<br><img src="http://i.imgur.com/Gl6hXS1.png" alt=""><br>&emsp;包括添加三条解析记录，192.30.255.112是GitHub的地址，你也可以ping你的 <a href="http://xxxx.github.io" target="_blank" rel="external">http://xxxx.github.io</a> 的ip地址，填入进去。第三个记录类型是CNAME，CNAME的记录值是：你的用户名.github.io 这里千万别弄错了。第二步，登录GitHub，进入之前创建的仓库，点击settings<br><img src="http://i.imgur.com/J8GHo3N.png" alt=""><br>&emsp;往下拉，设置Custom domain，输入你的域名<br><img src="http://i.imgur.com/GFjYtb3.png" alt=""><br>&emsp;点击save保存。第三步，进入本地博客文件夹 ，进入blog/source目录下，创建一个记事本文件，输入你的域名，对，只要写进你自己的域名即可。如果带有www，那么以后访问的时候必须带有www完整的域名才可以访问，但如果不带有www，以后访问的时候带不带www都可以访问。所以建议，不要带有www。<br><img src="http://i.imgur.com/E0ZDPfU.png" alt=""><br>&emsp;保存，命名为CNAME，注意要保存成所有文件，而不是txt文件。<br>完成这三步以后进入blog目录中，输入：</p>
-<pre><code>hexo clean
-hexo g
-hexo d
-</code></pre><p>这时候打开浏览器在地址栏输入个性化域名就会直接进入你自己搭建的网站。</p>
+<p>&emsp;登录到阿里云，进入域名控制台，找到你的个性化域名，进入解析：<br><img src="http://i.imgur.com/Nh0H69Y.png" alt=""><br>然后添加解析：<br><img src="http://i.imgur.com/Gl6hXS1.png" alt=""><br>&emsp;包括添加三条解析记录，192.30.255.112是GitHub的地址，你也可以ping你的 <a href="http://xxxx.github.io" target="_blank" rel="external">http://xxxx.github.io</a> 的ip地址，填入进去。第三个记录类型是CNAME，CNAME的记录值是：你的用户名.github.io 这里千万别弄错了。第二步，登录GitHub，进入之前创建的仓库，点击settings<br><img src="http://i.imgur.com/J8GHo3N.png" alt=""><br>&emsp;往下拉，设置Custom domain，输入你的域名<br><img src="http://i.imgur.com/GFjYtb3.png" alt=""><br>&emsp;点击save保存。第三步，进入本地博客文件夹 ，进入blog/source目录下，创建一个记事本文件，输入你的域名，对，只要写进你自己的域名即可。如果带有www，那么以后访问的时候必须带有www完整的域名才可以访问，但如果不带有www，以后访问的时候带不带www都可以访问。所以建议，不要带有www。<br><img src="http://i.imgur.com/E0ZDPfU.png" alt=""><br>&emsp;保存，命名为CNAME，注意要保存成所有文件，而不是txt文件。<br>完成这三步以后进入blog目录中，输入：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">hexo clean</span></div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure><br>这时候打开浏览器在地址栏输入个性化域名就会直接进入你自己搭建的网站。</p>
 <h2 id="还有一点"><a href="#还有一点" class="headerlink" title="还有一点"></a>还有一点</h2><h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>&emsp;如果你不喜欢Hexo自带的主题，可以更换不同的主题，主题传送门：<a href="https://hexo.io/themes/" target="_blank" rel="external">Themes</a>。</p>
 <h3 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h3><p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。Markdown语法简洁明了、容易掌握，而且功能比纯文本更强。具体语法参看<a href="http://www.appinn.com/markdown/#precode" target="_blank" rel="external">Markdown语法说明书</a><br>编辑器推荐使用<a href="http://www.markdownpad.com/" target="_blank" rel="external">The Markdown Editor for Windows</a></p>
-<h3 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h3><p>&emsp;在blog目录中进入命令行模式，输入：</p>
-<pre><code>hexo new &quot;博客名&quot;
-</code></pre><p>会在source目录下创建一个博客名.md文件，使用Markdown编辑器打开，就能开始你的个人博客之旅了。</p>
+<h3 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h3><p>&emsp;在blog目录中进入命令行模式，输入：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo <span class="keyword">new</span> <span class="string">"博客名"</span></div></pre></td></tr></table></figure><br>会在source目录下创建一个博客名.md文件，使用Markdown编辑器打开，就能开始你的个人博客之旅了。</p>
 <h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>&emsp;花了几个小时的时间来完成这篇博客，心里也是挺有成就感的，应该也会有很多跟我一样想做一个自己的博客却迟迟没有行动的小伙伴，希望写的这些能帮到你们。</p>
 
       
