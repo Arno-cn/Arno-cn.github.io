@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Python," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="Python的安装和基础知识。 在这个博客中我会简单地告诉你Python是什么，为什么你应该使用它，以及如何使用。">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础教程-基础知识以及准备工作">
+<meta property="og:url" content="http://yoursite.com/2017/07/27/Python基础教程—基础知识以及准备工作/index.html">
+<meta property="og:site_name" content="Shinstein&#39;s Blog">
+<meta property="og:description" content="Python的安装和基础知识。 在这个博客中我会简单地告诉你Python是什么，为什么你应该使用它，以及如何使用。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://i.imgur.com/GKPvYuA.png">
+<meta property="og:updated_time" content="2017-07-28T01:45:18.394Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python基础教程-基础知识以及准备工作">
+<meta name="twitter:description" content="Python的安装和基础知识。 在这个博客中我会简单地告诉你Python是什么，为什么你应该使用它，以及如何使用。">
+<meta name="twitter:image" content="http://i.imgur.com/GKPvYuA.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":true,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/27/Python基础教程—基础知识以及准备工作/"/>
+
+
+
+
+
+  <title>Python基础教程-基础知识以及准备工作 | Shinstein's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Shinstein's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Hello,world</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/27/Python基础教程—基础知识以及准备工作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Shinstein">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://i.imgur.com/eSa5AC0.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Shinstein's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python基础教程-基础知识以及准备工作</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-27T11:15:38+08:00">
+                2017-07-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          
+          
+            <div class="post-gallery-row">
+              <a class="post-gallery-img fancybox"
+                 href="http://i.imgur.com/GKPvYuA.png" rel="gallery_cj5n6xdr60002f8woujpdqesa"
+                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="http://i.imgur.com/GKPvYuA.png" itemprop="contentUrl"/>
+              </a>
+            
+          
+
+          
+          </div>
+        </div>
+      
+
+      
+        <p><br></p>
+<blockquote>
+<p>Python的安装和基础知识。</p>
+<p>在这个博客中我会简单地告诉你Python是什么，为什么你应该使用它，以及如何使用。</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="开场白"><a href="#开场白" class="headerlink" title="开场白"></a>开场白</h1><p> 那么什么是Python？简单地用官方语言来说，那就是Python是“<strong>一种解释型的，面向对象的，带有动态语义的高级程序设计语言</strong>”,有点晦涩难懂，但是最重要的是，<strong>Python是一种想让你在编程实现自己想法时感觉不那么碍手碍脚的程序设计语言</strong>。你可以花较少的代价实现想要的功能，并且编写的程序清晰易懂。</p>
+<h1 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h1><p> 在开始编程前，需要安装一些新软件。下面简要介绍如何下载和安装Python。如果想直接跳到安装过程而不看详细的向导，可以直接访问网址<a href="http://python.org/downloads" target="_blank" rel="external"><strong>Python下载</strong></a>。</p>
+<p> 因为系统原因，下面只介绍如何在Windows系统中安装Python，Linux及Unix版本的安装方法请自行上网搜索。</p>
+<h2 id="Windows安装"><a href="#Windows安装" class="headerlink" title="Windows安装"></a>Windows安装</h2><p> 要在Windows系统中安装Python，请参照下面的步骤进行：</p>
+<ol>
+<li>打开Web浏览器，访问<a href="http://www.python.org" target="_blank" rel="external"><strong>Python官网</strong></a>。</li>
+<li>点击<strong>Download</strong>链接。</li>
+<li>在这里可以看到几条链接，名字类似于<strong>Python2.x.y</strong>或者<strong>Python2.x.y Windows installer</strong>。<br>点击<strong>Windows installer</strong>链接并且下载安装文件。</li>
+<li>将Windows Installer文件放在计算机的任何位置均可，比如C：\download\python-2.x.y.msi。</li>
+<li>在Window 资源管理器中双击运行下载的文件，开启Python的安装向导。只需要接受默认设计，等到安装程序完成，你就能使用Python了。</li>
+</ol>
+<p>假如安装一切正常，应该能在Windows的开始菜单中找到新安装的Python程序。按照<strong>开始→所有程序→Python→IDLE</strong>的步骤运行Python集成开发环境（ Python Integrated Development Environment,IDLE）。</p>
+<p>你现在应该看到一个这样的窗口，至此Window下的Python安装就已经完成了。<br><img src="http://i.imgur.com/KKKiWJ9.png" alt=""></p>
+<h2 id="交互式解释器"><a href="#交互式解释器" class="headerlink" title="交互式解释器"></a>交互式解释器</h2><p>当启动Python的时候，会出现和下面相似的提示：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Python 2.7.13 (v2.7.13:a06454b1afa1, Dec 17 2016, 20:42:59) [MSC v.1500 32 bit (Intel)] on win32<span class="built_in"></span></div><div class="line">Type <span class="string">"copyright"</span>, <span class="string">"credits"</span> <span class="keyword">or</span> <span class="string">"license()"</span> <span class="keyword">for</span> more information.</div><div class="line">&gt;&gt;&gt;</div></pre></td></tr></table></figure><br>试着输入下面的命令，看看它是否工作：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;<span class="built_in">print</span> <span class="string">"Hello,world!"</span></span></div></pre></td></tr></table></figure><br>按下回车键后，可以看到下面的输出：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Hello,world!</div><div class="line"><span class="meta">&gt;&gt;</span>&gt;</div></pre></td></tr></table></figure></p>
+<p>发生了什么呢？&gt;&gt;&gt;是提示符，可以在后面输入你想输入的东西，比如print “Hello,world!”。按下回车键以后，Python解释器就根据你输入的语句来打印出“Hello,world!”字符串。下一行又会出现一个新的提示符。如果你输入了解释器不明白的内容，比如下面这样：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt; I love python!</div><div class="line"><span class="symbol">SyntaxError:</span> invalid syntax</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; </div></pre></td></tr></table></figure><br>它就会提示你出现了错误。</p>
+<h1 id="算法是什么"><a href="#算法是什么" class="headerlink" title="算法是什么"></a>算法是什么</h1><p> 在开始编程之前，首先要知道的是什么是计算机程序设计。简单的说，它就是告诉计算机该做什么，计算机可以做很多事情，但是它就像婴儿一样，不知道自己该怎么做。程序员通过使用计算机能够理解的语言——<strong>算法</strong>来告诉计算机具体的细节。</p>
+<p>简单地来说，算法就像是步骤，也就是对如何做一件事的详细描述，比如：</p>
+<blockquote>
+<p>出门：<br><br>首先，穿好衣服和鞋子；<br><br>如果快要下雨了，带上一把雨伞；<br><br>然后，出门；<br><br>每30分钟检查一次自己的鞋带是否开了；<br></p>
+</blockquote>
+<p>这个步骤不是特别有趣，但是它的组成结构还是有点讲究的。它包括按照<strong>顺序执行</strong>的指令（ ”穿好衣服和鞋子“ ），考虑<strong>特定条件</strong>的指令(”如果快要下雨了，带上一把雨伞“)，还有一些是<strong>需要重复</strong>的(“每30分钟检查一次鞋带是否开了”)。<br>步骤和算法都包括一些材料（对象，物品），和指令（语句），接下来我们来看看一些Python的“<strong>材料</strong>”。</p>
+<h2 id="数字表达式"><a href="#数字表达式" class="headerlink" title="数字表达式"></a>数字表达式</h2><p>交互式Python解释器可以当做计算器使用，可以这样：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt;<span class="number">2</span>+<span class="number">2</span></div><div class="line"><span class="number">4</span></div></pre></td></tr></table></figure><br>Python的常用算数运算符大部分情况下和计算器相同，+是加法，-是减法，*是乘法，,**是幂运算，/是整除，%是取余。</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>Python中的变量很好理解，类似于数学中的方程式的变量定义，比如我有一个x,我可以让它等于3或者等于4，在程序中使用变量，可以提高程序的作用。可以看下面的例子：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt;print <span class="number">3</span>+<span class="number">3</span></div><div class="line"><span class="number">6</span></div></pre></td></tr></table></figure><br>和<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt;x=<span class="number">3</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt;y=<span class="number">4</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt;x+y</div><div class="line"><span class="number">7</span></div></pre></td></tr></table></figure><br>显而易见，第一个例子只能实现3+3的功能，然而第二个例子，可以实现各种加法，结果取决于你在给变量赋值时的值,x=3这个操作意思是将3这个值赋予x，使得x=3。<br>在Python中，变量的赋值特别容易，<strong>使用C语言定义变量需要有类型</strong>，比如<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">int <span class="attribute">a</span>=3</div></pre></td></tr></table></figure><br>然而使用python中定义变量仅需要输入你想赋值给变量的值，<strong>值的类型决定变量的类型</strong><br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;&lt;<span class="attribute">x</span>=3</div><div class="line">&lt;&lt;&lt;<span class="builtin-name">print</span> x</div><div class="line">3</div></pre></td></tr></table></figure><br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;&lt;<span class="attribute">x</span>=3.0</div><div class="line">&lt;&lt;&lt;<span class="builtin-name">print</span> x</div><div class="line">3.0</div></pre></td></tr></table></figure></p>
+<h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><p>前面提到的大部分都是表达式，语句有<strong>print</strong>和<strong>赋值</strong>,可能你还不知道表达式和语句的区别是什么，简单来说，表达式就是<strong>某件事情</strong>，而语句是<strong>做某些事情</strong>，<strong>表达式除了对运算以外本身并没有任何作用</strong>，请看例子：<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;&lt;&lt; <span class="number">2</span>*<span class="number">2</span></div><div class="line"><span class="number">4</span></div><div class="line">&lt;&lt;&lt; x=<span class="number">2</span>*<span class="number">2</span></div><div class="line">&lt;&lt;&lt;</div></pre></td></tr></table></figure><br>可以看到，“2*2”仅仅是运算2乘以2的结果，并打印出来，交互式解释器总是把所有表达式的值打印出来。虽然 x=2*2没有打印出来任何结果，然而有些东西已经变化了，x现在的值等于4。这也能看语句的一般性特征，<strong>语句可以改变事物</strong>，比如赋值语句改变了变量的值，print语句改变了屏幕显示的内容。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>之前提到过使用（**）运算符来进行幂运算，实际上我们可以使用pow（）函数来代替它。<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt;&gt;&gt;<span class="number">2</span>**<span class="number">3</span></div><div class="line"><span class="number">8</span></div><div class="line">&gt;&gt;&gt;pow(<span class="number">2</span>,<span class="number">3</span>)</div><div class="line"><span class="number">8</span></div></pre></td></tr></table></figure><br>可以看到结果是一样的。<br>函数就像小型函数程序一样，用来<strong>实现特定的功能</strong>，python本身有很多自带的函数，一般这种函数被称为内建函数，你也可以自己定义各种函数。使用函数的方式被称为调用函数，你可以给他提供参数，比如上例中的（2,3）,有返回值的函数可以简单看做另外一种形式的表达式。<br>这里介绍一个很重要的函数，input（）函数。在上面提到的所有程序和表达式都是基于自身已经知道变量内容的，然而真正在程序编写时，你不一定知道某个变量的值会是什么，该是什么。这时候使用input函数来<strong>获取输入</strong>就很重要了:<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt; input(<span class="string">"The meaning of life :"</span>)</div><div class="line">The meaning of <span class="symbol">life:</span><span class="number">42</span></div><div class="line"><span class="number">42</span></div></pre></td></tr></table></figure><br>在这里，解释器执行了第一行的Input（）语句，<strong>在括号中引号中的内容会被原样打印出来，作为输入的提示，Input语句执行的结果就是我输入的数字，它会在最后一行被自动打印出来</strong>。这个例子只是介绍input语句的执行过程，真正的应用请看下例：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; x=input(<span class="string">"x:"</span>)</span></div><div class="line">x:34</div><div class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; y=input(<span class="string">"y:"</span>)</span></div><div class="line">y:42</div><div class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt; <span class="built_in">print</span> x*y</span></div><div class="line">1428</div></pre></td></tr></table></figure><br>由此可以看到编写程序时我们并不需要知道具体的值是多少，只要对需要操作的变量进行编程就行，具体的值由用户提供。</p>
+<h2 id="保存并执行程序"><a href="#保存并执行程序" class="headerlink" title="保存并执行程序"></a>保存并执行程序</h2><p>看到这有些人可能会产生困惑，那么该如何让别人运行自己的程序呢，前面做的都是自己在操作。其实是这样的，交互型解释器是为了让你看自己程序的效果，要想产生能让别人操作的程序步骤如下<strong>文件（File）→新建（New File）→输入程序</strong>或者直接<strong>Ctrl+N→输入程序</strong>就可以进入没有交互式提示符。<br>输入：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">x=<span class="keyword">input</span>(<span class="string">"x:"</span>)</div><div class="line">y=<span class="keyword">input</span>(<span class="string">"y:"</span>)</div><div class="line"><span class="keyword">print</span> x*<span class="built_in">y</span></div><div class="line"><span class="keyword">input</span>(“Press Enter:”)</div></pre></td></tr></table></figure><br>然后选择<strong>File→Save</strong>将程序保存到一个你能找到的地方，之后先别关闭编辑器，按下<strong>Ctrl+F5</strong>来运行程序<br><img src="http://i.imgur.com/gNQFHci.png" alt=""><br>可以看到我们已经编写了一个简单的计算程序，会提示你要输入x和y的值。<br>找到刚刚保存文件的位置，双击打开，可以看到出现了一个Dos窗口<br><img src="http://i.imgur.com/FckvOID.png" alt=""><br>输入x和y的值以后就会得到结果，在程序中加入input(“Press Enter:”)的原因是正常情况下，<strong>程序执行完毕后会直接关闭DOS窗口</strong>，也就是说，输入x和y以后会DOS窗口会闪退，你也就看不到结果，加入这个语句以后，当你输入了值才会关闭窗口。</p>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>Python中使用#号来作为注释符号，<strong>出现在其右边的一切内容都会被忽略掉</strong>。<br>所以它的作用就很明显了，用来说明自己的程序某个地方是用来做什么的，这样当别人看你的代码时更容易理解。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div></div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/wechatpay.jpg" alt="Shinstein WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/alipay.jpg" alt="Shinstein Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/23/Github+Hexo搭建个人博客/" rel="next" title="Github+Hexo搭建个人博客">
+                <i class="fa fa-chevron-left"></i> Github+Hexo搭建个人博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://i.imgur.com/eSa5AC0.jpg"
+               alt="Shinstein" />
+          <p class="site-author-name" itemprop="name">Shinstein</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="/wechat" target="_blank" title="Wechat">
+                  
+                    <i class="fa fa-fw fa-wechat"></i>
+                  
+                  Wechat
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/shinstein" target="_blank" title="Zhihu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Zhihu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=133998&auto=0&height=66"></iframe>
+
+        
+
+
+      </section>
+       
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#开场白"><span class="nav-number">1.</span> <span class="nav-text">开场白</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Python"><span class="nav-number">2.</span> <span class="nav-text">安装Python</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows安装"><span class="nav-number">2.1.</span> <span class="nav-text">Windows安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#交互式解释器"><span class="nav-number">2.2.</span> <span class="nav-text">交互式解释器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法是什么"><span class="nav-number">3.</span> <span class="nav-text">算法是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数字表达式"><span class="nav-number">3.1.</span> <span class="nav-text">数字表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量"><span class="nav-number">3.2.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语句"><span class="nav-number">3.3.</span> <span class="nav-text">语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-number">3.4.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#保存并执行程序"><span class="nav-number">3.5.</span> <span class="nav-text">保存并执行程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">3.6.</span> <span class="nav-text">注释</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+   
+      <!--/noindex-->
+      
+       
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Shinstein</span>
+</div>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
